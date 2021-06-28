@@ -1,3 +1,4 @@
+# This is a comment
 FROM rocker/shiny:latest
 
 RUN apt-get update -qq && apt-get -y --no-install-recommends install \
