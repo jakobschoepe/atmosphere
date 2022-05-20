@@ -16,7 +16,7 @@ RUN apt-get update && \
     
 COPY /R ./app
 
-RUN R -e 'install.packages(c("bsplus", "htmltools", "RSQLite", "shinymanager", "shinyjs", "shinythemes", "tinytex", "rmarkdown"), dependencies = TRUE)'
+RUN R -e 'install.packages(c("bsplus", "htmltools", "RSQLite", "shinyalert", "shinymanager", "shinyjs", "shinythemes", "tinytex", "rmarkdown"), dependencies = TRUE)'
 RUN R -e 'tinytex::install_tinytex()'
 RUN R -e 'tinytex::tlmgr_install(c("caption", "csquotes", "fancyhdr", "multirow", "pdflscape", "eso-pic", "grfext", "oberdiek", "pdfpages", "fp", "ms", "pgf", "pgfplots", "setspace", "soul", "stix", "babel-english"))'
 
