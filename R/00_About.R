@@ -1,0 +1,17 @@
+tabPanel("About", 
+         h5("Last updated: May 19, 2022", align = "center"),
+         br(),
+         h4(strong("Non-Disclosure Declaration")),
+         p("This dashboard contains confidential information. Disclosure of confidential information in whole or in part without express written consent of the involved cooperation partners is prohibited."),
+         h4(strong("Contact")),
+         p(strong("Clinical Site:"), "Department of Gynaecology, Obstetrics & Reproductive Medicine (Saarland University Medical Center)"),
+         p(strong("Principal Investigator:"), "Bashar Haj Hamoud"),
+         p(strong("Statistical Consultant:"), "Jakob Schöpe"),
+         br(),
+         br(),
+         img(src = "Logo.png", style = "display: block; margin-left: auto; margin-right: auto;", height = 50, width = 225),
+         br(),
+         br(),
+         p(HTML("&#169;"), "2022 Institute for Medical Biometry, Epidemiology and Medical Informatics (Saarland University)", align = "center"),
+         uiOutput("loggedin1")
+)
