@@ -1,4 +1,4 @@
-FROM rocker/shiny:latest
+FROM rocker/shiny:4.2
 
 RUN apt-get update -qq && apt-get -y --no-install-recommends install \
     libxml2-dev \
@@ -16,9 +16,9 @@ RUN apt-get update && \
     
 COPY /app ./app
 
-RUN R -e 'install.packages(c("shinymanager", "shinyjs", "shinythemes", "TrialSize", "tinytex", "randomizeR", "rmarkdown"), dependencies = TRUE)'
+RUN R -e 'install.packages(c("bsplus", "htmltools", "RSQLite", "shinymanager", "shinyjs", "shinythemes", "tinytex", "rmarkdown"), dependencies = TRUE)'
 RUN R -e 'tinytex::install_tinytex()'
-RUN R -e 'tinytex::tlmgr_install(c("caption", "csquotes", "fancyhdr", "multirow", "pdflscape", "eso-pic", "grfext", "oberdiek", "pdfpages", "fp", "ms", "pgf", "pgfplots", "setspace", "soul", "babel-english"))'
+RUN R -e 'tinytex::tlmgr_install(c("caption", "csquotes", "fancyhdr", "multirow", "pdflscape", "eso-pic", "grfext", "oberdiek", "pdfpages", "fp", "ms", "pgf", "pgfplots", "setspace", "soul", "stix", "babel-english"))'
 
 EXPOSE 3838
 
