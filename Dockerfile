@@ -14,7 +14,7 @@ RUN apt-get update && \
     apt-get upgrade -y && \
     apt-get clean 
     
-COPY /app ./app
+COPY /R ./app
 
 RUN R -e 'install.packages(c("bsplus", "htmltools", "RSQLite", "shinymanager", "shinyjs", "shinythemes", "tinytex", "rmarkdown"), dependencies = TRUE)'
 RUN R -e 'tinytex::install_tinytex()'
