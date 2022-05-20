@@ -1,0 +1,90 @@
+---
+documentclass: article
+graphics: yes
+header-includes:
+- \usepackage[utf8]{inputenc}
+- \usepackage[format=plain, justification=justified, labelfont=bf, singlelinecheck=false, textfont=normal]{caption}
+- \usepackage{booktabs, csquotes, fancyhdr, float, graphicx, multirow, pdflscape, pdfpages, pgfplots, rotating, setspace, soul, tabularx, tikz}
+- \usepackage[T1]{fontenc}
+- \usepackage[notextcomp]{stix}
+- \usetikzlibrary{shapes.geometric, arrows}
+- \tikzstyle{startstop} = [rectangle, rounded corners, minimum width=5cm, minimum height=1.5cm, text centered, draw=black]
+- \tikzstyle{arrow} = [thick,->,>=stealth]
+- \tikzstyle{arrow2} = [thick,-,>=stealth]
+- \oddsidemargin=62pt
+- \topmargin=16pt
+- \headheight=22.5pt
+- \headsep=25pt
+- \textheight=550pt
+- \textwidth=345pt
+- \marginparsep=11pt
+- \marginparwidth=65pt
+- \footskip=30pt
+- \marginparpush=5pt
+- \hoffset=0pt
+- \voffset=0pt
+- \paperwidth=614pt
+- \paperheight=794pt
+- \pgfplotsset{compat=1.17}
+lang: en
+output: 
+  pdf_document:
+    number_sections: false
+    keep_tex: false
+params:
+  A: NA
+  B: NA
+---
+
+\pagestyle{fancy}
+\lhead{Allocation Report\\Trial No. 54885/2022/01H}
+\rhead{Version: 1.0\\Generated: \today}
+
+\pagenumbering{gobble}
+\null\vfill
+\begin{center}
+\textbf{Trial No. 54885/2022/01H}\\
+\vspace{1cm}
+\textbf{A Randomized, Controlled, Parallel-Group, Investigator-Initiated Trial to Evaluate the Reduction of Lens Fogging of a Laparoscopic Lens With Endoflator\textregistered~50 Compared to an Unheated Lens}\\~\\
+\vspace{1cm}
+\Large{\textbf{ALLOCATION REPORT}}
+\end{center}
+\vfill
+\pagebreak
+\pagenumbering{gobble}
+\begin{large}
+\textbf{Cooperation Partner:}\\~\\
+\end{large}
+\begin{raggedright}
+\textbf{Department of Gynaecology, Obstetrics \& Reproductive Medicine}\\
+\textbf{Saarland University Medical Center}\\
+66424 Homburg (Saar)\\
+Germany\\
+\vspace{.75cm}
+\textbf{Institute for Medical Biometry, Epidemiology \& Medical Informatics}\\
+\textbf{Saarland University}\\
+66424 Homburg (Saar)\\
+Germany\\
+\end{raggedright}
+\vspace{1.5cm}
+\noindent\begin{tabular}{ll}
+&Homburg, \today\\
+\makebox[2.5in]{\hrulefill}&\makebox[2in]{\hrulefill}\\
+\textbf{J Schöpe, MSc}&Place and date\\
+Senior Statistician\\
+Saarland University\\
+\end{tabular}
+\vspace{1cm}
+\noindent\fbox{%
+    \parbox{\textwidth}{\textbf{Non-Disclosure Declaration}\\
+This document contains confidential information of the Department of Gynaecology, Obstetrics and Reproductive Medicine (Saarland University Medical Center) and the Institute for Medical Biometry, Epidemiology and Medical Informatics (Saarland University). Neither the document nor the information contained therein should be disclosed or reproduced in whole or in part, without express written consent of the involved cooperation partners.}}
+\newpage
+\pagenumbering{arabic}
+\setcounter{page}{1}
+\setcounter{table}{0}
+```{r, echo = FALSE}
+knitr::kable(params$A, align = "l", row.names = FALSE)
+```
+```{r, echo = FALSE}
+knitr::kable(params$B, align = "l", row.names = FALSE)
+```
