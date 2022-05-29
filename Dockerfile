@@ -19,7 +19,7 @@ RUN R -e 'install.packages(c("bsplus", "htmltools", "RSQLite", "shinymanager", "
 #RUN R -e 'tinytex::install_tinytex()'
 #RUN R -e 'tinytex::tlmgr_install(c("caption", "csquotes", "fancyhdr", "multirow", "pdflscape", "eso-pic", "grfext", "oberdiek", "pdfpages", "fp", "ms", "pgf", "pgfplots", "setspace", "soul", "stix", "babel-english"))'
 
-RUN chown -R shiny:shiny /srv/shiny-server
+RUN sudo chown -R shiny:shiny /srv/shiny-server
 
 USER shiny
 
