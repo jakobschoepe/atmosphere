@@ -1,6 +1,5 @@
 library(htmltools)
 library(bsplus)
-library(rmarkdown)
 library(RSQLite)
 library(shiny)
 library(shinyjs)
