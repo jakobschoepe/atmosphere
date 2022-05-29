@@ -1,4 +1,4 @@
-FROM rocker/shiny:4.2
+FROM rocker/shiny:4.2.0
 
 RUN apt-get update -qq && apt-get -y --no-install-recommends install \
     libxml2-dev \
@@ -13,13 +13,16 @@ RUN apt-get update -qq && apt-get -y --no-install-recommends install \
 RUN apt-get update && \
     apt-get upgrade -y && \
     apt-get clean 
-    
-COPY /R ./app
 
-RUN R -e 'install.packages(c("bsplus", "htmltools", "RSQLite", "shinyalert", "shinymanager", "shinyjs", "shinythemes", "tinytex", "rmarkdown"), dependencies = TRUE)'
-RUN R -e 'tinytex::install_tinytex()'
-RUN R -e 'tinytex::tlmgr_install(c("caption", "csquotes", "fancyhdr", "multirow", "pdflscape", "eso-pic", "grfext", "oberdiek", "pdfpages", "fp", "ms", "pgf", "pgfplots", "setspace", "soul", "stix", "babel-english"))'
+RUN R -e 'install.packages(c("bsplus", "htmltools", "RSQLite", "shinymanager", "shinyjs", "shinythemes"), dependencies = TRUE)'
+#Please add tinytex and rmarkdown to install.packages()
+#RUN R -e 'tinytex::install_tinytex()'
+#RUN R -e 'tinytex::tlmgr_install(c("caption", "csquotes", "fancyhdr", "multirow", "pdflscape", "eso-pic", "grfext", "oberdiek", "pdfpages", "fp", "ms", "pgf", "pgfplots", "setspace", "soul", "stix", "babel-english"))'
+
+RUN chown -R shiny:shiny /srv/shiny-server
+
+USER shiny
 
 EXPOSE 3838
 
-CMD ["R", "-e", "shiny::runApp('/app', host = '0.0.0.0', port = 3838)"]
+CMD ["/usr/bin/shiny-server"]
