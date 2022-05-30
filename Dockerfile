@@ -21,6 +21,8 @@ RUN R -e 'install.packages(c("bsplus", "htmltools", "RSQLite", "shinymanager", "
 
 COPY shiny-server.sh /usr/bin/shiny-server.sh
 
+RUN chmod -R 755 /usr/bin/shiny-server.sh
+
 #RUN sudo chown -R shiny:shiny /srv/shiny-server
 
 #USER shiny
