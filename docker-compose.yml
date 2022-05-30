@@ -12,7 +12,7 @@ services:
   #    - ./certbot/conf:/etc/letsencrypt
   #    - ./certbot/www:/var/www/certbot
       - /etc/letsencrypt/live/atmosphere-platform.org:/etc/letsencrypt/live/atmosphere-platform.org
-      - ./nginx/conf:/etc/nginx/conf.d
+      - ./nginx:/etc/nginx/conf.d
       
   #certbot:
   #  container_name: jakobschoepe/certbot:amd64-1.27.0
