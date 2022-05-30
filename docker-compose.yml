@@ -2,7 +2,7 @@ version: "3"
 
 services:
   nginx:
-    container_name: jakobschoepe/nginx:amd64-1.22.0
+    container_name: nginx
     image: amd64/nginx:1.22.0
     restart: unless-stopped
     ports:
@@ -12,9 +12,10 @@ services:
       - ./certbot/conf:/etc/letsencrypt
       - ./certbot/www:/var/www/certbot
       - ./nginx:/etc/nginx/conf.d
+    command: "/bin/sh -c 'while :; do sleep 6h & wait $${!}; nginx -s reload; done & nginx -g \"daemon off;\"'"  
       
   certbot:
-    container_name: jakobschoepe/certbot:amd64-1.27.0
+    container_name: certbot
     image: certbot/certbot:amd64-v1.27.0
     volumes:
       - ./certbot/conf:/etc/letsencrypt
