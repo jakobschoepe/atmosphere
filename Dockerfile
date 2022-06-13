@@ -1,5 +1,7 @@
 FROM rocker/shiny:4.2.0
 
+LABEL maintainer="Jakob Schöpe <contact@atmosphere-platform.org>"
+
 RUN apt-get update -qq && apt-get -y --no-install-recommends install \
     libxml2-dev \
     libcairo2-dev \
