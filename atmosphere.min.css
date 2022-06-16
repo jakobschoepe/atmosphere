@@ -1919,8 +1919,9 @@ li code {
 
 .card {
   background: #fff;
-  border: .05rem solid #dadee4;
+  border: 0;
   border-radius: .1rem;
+  box-shadow: 0 .25rem 1rem rgba(48, 55, 66, .15);
   display: -ms-flexbox;
   display: flex;
   -ms-flex-direction: column;
