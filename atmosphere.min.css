@@ -1916,3 +1916,49 @@ li code {
 .accordion[open] .accordion-body {
   max-height:100rem;margin-bottom:1rem
 }
+
+.card {
+  background: #fff;
+  border: .05rem solid #dadee4;
+  border-radius: .1rem;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.card .card-header,
+.card .card-body,
+.card .card-footer {
+  padding: .8rem;
+  padding-bottom: 0;
+}
+
+.card .card-header:last-child,
+.card .card-body:last-child,
+.card .card-footer:last-child {
+  padding-bottom: .8rem;
+}
+
+.card .card-body {
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+}
+
+.card .card-image {
+  padding-top: .8rem;
+}
+
+.card .card-image:first-child {
+  padding-top: 0;
+}
+
+.card .card-image:first-child img {
+  border-top-left-radius: .1rem;
+  border-top-right-radius: .1rem;
+}
+
+.card .card-image:last-child img {
+  border-bottom-left-radius: .1rem;
+  border-bottom-right-radius: .1rem;
+}
